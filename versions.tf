@@ -21,11 +21,11 @@ terraform {
   }
 
   # TODO: Customize - Uncomment and configure for remote state
-  # backend "s3" {
-  #   bucket         = "my-project-terraform-state"
-  #   key            = "eks/terraform.tfstate"
-  #   region         = "ap-southeast-1"
-  #   dynamodb_table = "my-project-terraform-locks"
-  #   encrypt        = true
-  # }
+  backend "s3" {
+    bucket         = "ops4life-iac"
+    key            = "demo/terraform.tfstate"
+    region         = "ap-southeast-1"
+    dynamodb_table = "demo-terraform-locks"
+    encrypt        = true
+  }
 }
